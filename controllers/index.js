@@ -243,7 +243,7 @@ module.exports = {
             let upvoteDif = 0;
             let downvoteDif = 0;
             const boolVote = !!req.body.vote;
-            if (message) {
+            if (message && req.body.messageId) {
               // check vote exists
               db.Votes.find({
                 where: {
